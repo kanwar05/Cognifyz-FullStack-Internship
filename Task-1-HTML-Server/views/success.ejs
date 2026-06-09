@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Successful</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Registration Successful</h1>
-
-        <div class="card">
-            <p><strong>Name:</strong> <%= user.name %></p>
-            <p><strong>Email:</strong> <%= user.email %></p>
-            <p><strong>Age:</strong> <%= user.age %></p>
-            <p><strong>Course:</strong> <%= user.course %></p>
-        </div>
-        <a href="/" >Go Back</a>
-    </div>
+  <main class="page">
+    <section class="panel">
+      <p class="eyebrow">Server Response</p>
+      <h1>Form Submitted Successfully</h1>
+      <div class="summary">
+        <p><strong>Name:</strong> <%= user.name %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Message:</strong> <%= user.message %></p>
+      </div>
+      <a class="link-button" href="/">Submit Another Response</a>
+    </section>
+  </main>
 </body>
 </html>
