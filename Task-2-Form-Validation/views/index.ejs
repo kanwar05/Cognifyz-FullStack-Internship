@@ -1,64 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Student Registration Form</h1>
-
-        <form action="/submit" method="POST" onsubmit="return validateForm()">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter password" required>
-
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
-
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required placeholder="Enter your age">
-
-            <label for="course">Course</label>
-            <select name="course" id="course" required>
-                <option value="">Select your course</option>
-                <option value="CSE">CSE</option>
-                <option value="IT">IT</option>
-                <option value="ECE">ECE</option>
-                <option value="ME">ME</option>
-            </select>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <script>
-        function validateForm() {
-            const password = document.querySelector("[name='password']").value;
-            const phone = document.querySelector("[name='phone']").value;
-
-            if (password.length < 6) {
-                alert("Password must be at least 6 characters");
-                return false;
-            }
-
-            if (phone.length !== 10) {
-                alert("Phone number must be 10 digits");
-                return false;
-            }
-
-            return true;
-        }
-    </script>
+  <main class="layout">
+    <section class="panel">
+      <p class="eyebrow">Task 2</p>
+      <h1>Student Registration Validation</h1>
+      <form action="/submit" method="POST" novalidate>
+        <label>Name</label>
+        <input name="name" value="<%= old.name || '' %>" placeholder="Minimum 3 characters">
+        <% if (errors.name) { %><small><%= errors.name %></small><% } %>
+        <label>Email</label>
+        <input name="email" value="<%= old.email || '' %>" placeholder="student@example.com">
+        <% if (errors.email) { %><small><%= errors.email %></small><% } %>
+        <label>Age</label>
+        <input type="number" name="age" value="<%= old.age || '' %>" placeholder="16 to 60">
+        <% if (errors.age) { %><small><%= errors.age %></small><% } %>
+        <label>Course</label>
+        <select name="course">
+          <option value="">Select course</option>
+          <% ["Full Stack", "Frontend", "Backend", "Database"].forEach((course) => { %>
+            <option value="<%= course %>" <%= old.course === course ? 'selected' : '' %>><%= course %></option>
+          <% }) %>
+        </select>
+        <% if (errors.course) { %><small><%= errors.course %></small><% } %>
+        <label>Phone</label>
+        <input name="phone" value="<%= old.phone || '' %>" placeholder="9876543210">
+        <% if (errors.phone) { %><small><%= errors.phone %></small><% } %>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Minimum 6 characters">
+        <% if (errors.password) { %><small><%= errors.password %></small><% } %>
+        <button type="submit">Validate and Submit</button>
+      </form>
+    </section>
+  </main>
 </body>
-
 </html>
