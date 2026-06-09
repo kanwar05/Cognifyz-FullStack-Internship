@@ -36,6 +36,7 @@ Open `http://localhost:3001`.
 
 ### Server running
 ![Server Running](./screenshots/server_running.png)
+<img src="./screenshots/server_running.png" width="700" alt="Home Page">
 
 ### Browser output
 ![submission](./screenshots/submission.png)
