@@ -1,0 +1,17 @@
+{
+  "name": "task-4-dom-validation",
+  "version": "1.0.0",
+  "description": "Client-side DOM validation with tabs and dynamic updates.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

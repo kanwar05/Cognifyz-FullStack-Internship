@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="auth">
+    <form action="/login" method="POST" class="card">
+      <p class="eyebrow">JWT Authentication</p>
+      <h1>Login</h1>
+      <% if (error) { %><p class="error"><%= error %></p><% } %>
+      <label>Email</label>
+      <input name="email" type="email" required>
+      <label>Password</label>
+      <input name="password" type="password" required>
+      <button>Login</button>
+      <a href="/register">Create new account</a>
+    </form>
+  </main>
+</body>
+</html>

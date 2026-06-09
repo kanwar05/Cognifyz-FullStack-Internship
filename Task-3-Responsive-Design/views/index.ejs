@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Cognifyz Task 3</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <p class="badge text-bg-success">Bootstrap Responsive Design</p>
+          <h1 class="display-5 fw-bold">Build layouts that adapt cleanly on mobile, tablet, and desktop.</h1>
+          <p class="lead">This independent Express app uses Bootstrap grids, cards, navbar collapse, and responsive spacing.</p>
+          <a class="btn btn-success btn-lg" href="#services">View Sections</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="dashboard-preview">
+            <div class="preview-bar"></div>
+            <div class="preview-grid">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="container py-5">
+      <div class="row g-4">
+        <% services.forEach((service) => { %>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100">
+              <div class="card-body">
+                <h2 class="h5 card-title"><%= service.title %></h2>
+                <p class="card-text"><%= service.text %></p>
+              </div>
+            </article>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band py-5">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-md-8">
+            <h2 class="h3">Responsive Contact Section</h2>
+            <p class="mb-md-0">Columns stack on small screens and align horizontally on larger screens.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a class="btn btn-outline-dark" href="mailto:student@example.com">Email Student</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
