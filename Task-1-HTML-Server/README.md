@@ -35,11 +35,10 @@ Open `http://localhost:3001`.
 ## Screenshot
 
 ### Server running
-![Server Running](./screenshots/server_running.png)
-<img src="./screenshots/server_running.png" width="700" alt="Home Page">
+<img src="./screenshots/server_running.png" width="400" alt="Home Page">
 
 ### Browser output
-![submission](./screenshots/submission.png)
+<img src="./screenshots/submission.png" width="400" alt="Home Page">
 
 
 ## Step-by-Step Implementation
