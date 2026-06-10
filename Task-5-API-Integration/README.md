@@ -38,13 +38,11 @@ npm start
 ```
 Open `http://localhost:3005`.
 
-## What Screenshot to Take
-Take screenshots showing the task list, a newly added task, and a completed/deleted task interaction.
+## Screenshot
+### screenshots showing the task list, a newly added task, and a completed/deleted task interaction.
+<video src="./screenshots/API-Integration.mp4" width="400" height="500" controls></video>
 
-## Git Commit Message
-```text
-Add Task 5 REST API CRUD integration
-```
+
 
 ## Step-by-Step Implementation
 1. Configure Express with JSON parsing and EJS.
