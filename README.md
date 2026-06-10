@@ -2,63 +2,52 @@
 
 ## Overview
 
-This repository contains a collection of full stack internship projects demonstrating web development fundamentals using Node.js, Express, EJS, client-side JavaScript, and basic API integration.
+This repository contains my Cognifyz Full Stack Internship task submissions. Each task is organized in its own folder and demonstrates a focused web development concept using Node.js, Express.js, EJS, CSS, JavaScript, MongoDB, or external API integration.
 
-Each folder represents a separate task or mini-project, with its own server, front-end assets, and README documentation.
+## Tasks Included
 
-## Projects
+| Task | Project | Focus |
+| --- | --- | --- |
+| 1 | `Task-1-HTML-Server` | Basic Express server setup and static HTML rendering |
+| 2 | `Task-2-Form-Validation` | Form handling with server-side validation |
+| 3 | `Task-3-Responsive-Design` | Responsive layouts and CSS styling |
+| 4 | `Task-4-DOM-Validation` | Client-side validation using JavaScript and DOM events |
+| 5 | `Task-5-API-Integration` | API consumption and dynamic UI updates |
+| 6 | `Task-6-Database-Authentication` | MongoDB authentication with registration, login, JWT cookies, and protected routes |
+| 7 | `Task-7-External-API` | Advanced external API integration with Express routes, caching, rate limiting, analytics, and responsive EJS pages |
 
-- `Student-Task-Manager`
-  - A task management application with user authentication, task CRUD operations, and external API integration.
-  - Uses Express, MongoDB, EJS templates, and custom middleware for auth and error handling.
+## Tech Stack
 
-- `Task-1-HTML-Server`
-  - A simple Express server serving static HTML content.
-  - Demonstrates basic server setup and view rendering.
+- Node.js
+- Express.js
+- EJS
+- HTML5
+- CSS3
+- JavaScript
+- MongoDB and Mongoose
+- JWT authentication
+- Axios
+- Bootstrap 5
 
-- `Task-2-Form-Validation`
-  - A form validation example with server-side logic.
-  - Shows how to validate user input before processing.
+## How to Run a Task
 
-- `Task-3-Responsive-Design`
-  - A responsive web page layout using CSS.
-  - Focuses on mobile-first design and flexible styling.
-
-- `Task-4-DOM-Validation`
-  - A front-end validation demo using JavaScript and DOM manipulation.
-  - Validates user input in real time and displays feedback.
-
-- `Task-5-API-Integration`
-  - A project demonstrating how to consume external APIs from a web app.
-  - Includes client-side fetch requests and dynamic content updates.
-
-- `Task-6-Database-Authentication`
-  - A login/register app with database-backed authentication.
-  - Uses MongoDB and secure password handling.
-
-- `Task-7-External-API`
-  - A standalone example of calling an external API and presenting results.
-  - Includes client-side interactivity and styling.
-
-- `Task-8-Advanced-Server`
-  - An advanced server project with request logging, caching, and job queue utilities.
-  - Demonstrates middleware and server-side optimization techniques.
-
-## How to Use
-
-1. Open a project folder in your terminal.
+1. Open the task folder:
+   ```bash
+   cd Task-7-External-API
+   ```
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the app:
+3. Configure environment variables if the task includes a `.env.example` file.
+4. Start the server:
    ```bash
    npm start
    ```
-4. Open the indicated local address in your browser.
+5. Open the local URL mentioned in that task's README file.
 
-## Notes
+## Important Notes
 
-- Each task folder contains its own `README.md` with more specific instructions.
-- Projects may require environment variables or a MongoDB connection for database-backed examples.
-- Check the folder README files for task-specific setup details.
+- Each task folder includes its own `README.md` with task-specific setup steps, routes, features, and screenshots or demo videos.
+- Database-based tasks require MongoDB to be running locally or a valid MongoDB connection string.
+- API-based tasks use server-side routes to keep external API configuration controlled by the backend.
