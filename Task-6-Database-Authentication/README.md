@@ -1,9 +1,11 @@
 # Task 6 - Database Authentication
 
 ## Objective
+
 Use MongoDB, Mongoose, user registration, login, JWT/session-style authentication, and protected routes.
 
 ## Folder Structure
+
 ```text
 Task-6-Database-Authentication/
   app.js
@@ -20,6 +22,7 @@ Task-6-Database-Authentication/
 ```
 
 ## Required npm Packages
+
 - express
 - ejs
 - mongoose
@@ -30,6 +33,7 @@ Task-6-Database-Authentication/
 - nodemon
 
 ## File Names
+
 - app.js
 - config/db.js
 - models/User.js
@@ -40,22 +44,24 @@ Task-6-Database-Authentication/
 - public/css/style.css
 
 ## How to Run
+
 ```bash
 npm install
 copy .env.example .env
 npm start
 ```
+
 Make sure MongoDB is running locally, then open `http://localhost:3006`.
 
-## What Screenshot to Take
-Take screenshots of the register page, login page, and protected dashboard after login.
+## Screenshot
 
-## Git Commit Message
-```text
-Add Task 6 MongoDB authentication
-```
+### screenshots of the register page, login page, and protected dashboard after login.
+
+<video src="./screenshots/DB-Auth.mp4.mp4" width="400" height="500" controls></video>
+
 
 ## Step-by-Step Implementation
+
 1. Configure environment variables in `.env`.
 2. Connect Express to MongoDB using Mongoose.
 3. Create a `User` model with unique email and hashed password.
