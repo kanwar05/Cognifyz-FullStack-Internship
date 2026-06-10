@@ -1,0 +1,45 @@
+<%- include('partials/head') %>
+<%- include('partials/sidebar') %>
+
+<main class="main-content">
+  <%- include('partials/topbar') %>
+
+  <section class="explorer-layout">
+    <article class="panel explorer-panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">External API</span>
+          <h3>Weather Search</h3>
+        </div>
+        <span class="status-pill"><i class="bi bi-lock"></i> Server-side request</span>
+      </div>
+
+      <form id="weatherForm" class="search-form">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input id="cityInput" name="city" type="search" class="form-control" placeholder="Search any city" autocomplete="off">
+          <button class="btn btn-primary" type="submit">
+            <span class="button-label">Fetch</span>
+            <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+
+      <div class="city-chip-grid mt-4">
+        <% featuredCities.slice(0, 6).forEach((city) => { %>
+          <button class="city-chip" type="button" data-city="<%= city %>"><i class="bi bi-pin-map"></i> <%= city %></button>
+        <% }) %>
+      </div>
+    </article>
+
+    <article class="panel result-panel reveal">
+      <div id="resultState" class="empty-state">
+        <i class="bi bi-cloud-sun"></i>
+        <h3>Search a city to preview live weather.</h3>
+        <p>Results include temperature, humidity, wind speed, coordinates, cache state, and provider metadata.</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<%- include('partials/scripts') %>

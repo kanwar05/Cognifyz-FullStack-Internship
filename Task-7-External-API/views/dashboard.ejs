@@ -1,0 +1,93 @@
+<%- include('partials/head') %>
+<%- include('partials/sidebar') %>
+
+<main class="main-content">
+  <%- include('partials/topbar') %>
+
+  <section class="hero-panel reveal">
+    <div>
+      <span class="hero-badge"><i class="bi bi-shield-check"></i> Advanced API integration</span>
+      <h2>Explore live weather data through a secure Express API gateway.</h2>
+      <p>The dashboard wraps Open-Meteo behind server-side routes, adds rate limiting, caches repeated searches, tracks analytics, and presents friendly UI states.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light btn-lg" href="/explorer"><i class="bi bi-search"></i> Explore API</a>
+        <a class="btn btn-outline-light btn-lg" href="/analytics"><i class="bi bi-activity"></i> View Analytics</a>
+      </div>
+    </div>
+    <div class="hero-weather glass-card">
+      <span class="mini-label">Live endpoint</span>
+      <strong>/api/weather</strong>
+      <div class="weather-orbit">
+        <i class="bi bi-cloud-lightning-rain"></i>
+      </div>
+      <p>JSON responses, validation, caching, and graceful provider failures.</p>
+    </div>
+  </section>
+
+  <section class="stats-grid">
+    <article class="stat-card reveal">
+      <span class="stat-icon blue"><i class="bi bi-hdd-network"></i></span>
+      <p>Total API Requests</p>
+      <strong data-stat="totalRequests"><%= analytics.totalRequests %></strong>
+    </article>
+    <article class="stat-card reveal">
+      <span class="stat-icon green"><i class="bi bi-check2-circle"></i></span>
+      <p>Successful Requests</p>
+      <strong data-stat="successfulRequests"><%= analytics.successfulRequests %></strong>
+    </article>
+    <article class="stat-card reveal">
+      <span class="stat-icon red"><i class="bi bi-exclamation-triangle"></i></span>
+      <p>Failed Requests</p>
+      <strong data-stat="failedRequests"><%= analytics.failedRequests %></strong>
+    </article>
+    <article class="stat-card reveal">
+      <span class="stat-icon amber"><i class="bi bi-lightning-charge"></i></span>
+      <p>Cached Responses</p>
+      <strong data-stat="cachedResponses"><%= analytics.cachedResponses %></strong>
+    </article>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">Quick launch</span>
+          <h3>Featured Cities</h3>
+        </div>
+        <a href="/explorer" class="link-action">Open explorer</a>
+      </div>
+      <div class="city-chip-grid">
+        <% featuredCities.forEach((city) => { %>
+          <a class="city-chip" href="/explorer?city=<%= encodeURIComponent(city) %>"><i class="bi bi-geo-alt"></i> <%= city %></a>
+        <% }) %>
+      </div>
+    </article>
+
+    <article class="panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">Recent activity</span>
+          <h3>Last Searches</h3>
+        </div>
+        <a href="/history" class="link-action">View all</a>
+      </div>
+      <% if (history.length) { %>
+        <div class="compact-history">
+          <% history.slice(0, 4).forEach((item) => { %>
+            <div>
+              <span><%= item.city %>, <%= item.country %></span>
+              <strong><%= item.temperature %>&deg;</strong>
+            </div>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <div class="empty-state small">
+          <i class="bi bi-cloud"></i>
+          <p>No searches yet. Try the API Explorer to populate the timeline.</p>
+        </div>
+      <% } %>
+    </article>
+  </section>
+</main>
+
+<%- include('partials/scripts') %>

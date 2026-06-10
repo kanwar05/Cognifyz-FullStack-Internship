@@ -1,0 +1,49 @@
+<%- include('partials/head') %>
+<%- include('partials/sidebar') %>
+
+<main class="main-content">
+  <%- include('partials/topbar') %>
+
+  <section class="content-grid">
+    <article class="panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">Configuration</span>
+          <h3>API Security</h3>
+        </div>
+        <span class="status-pill"><i class="bi bi-shield-lock"></i> Backend only</span>
+      </div>
+      <div class="settings-list">
+        <div>
+          <span>Weather base URL</span>
+          <strong><%= apiBaseUrl %></strong>
+        </div>
+        <div>
+          <span>Cache TTL</span>
+          <strong><%= cacheTtlMinutes %> minutes</strong>
+        </div>
+        <div>
+          <span>Rate limit</span>
+          <strong><%= process.env.RATE_LIMIT_MAX || 12 %> requests/minute</strong>
+        </div>
+      </div>
+    </article>
+
+    <article class="panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">Advanced concepts</span>
+          <h3>Production Notes</h3>
+        </div>
+      </div>
+      <ul class="concept-list">
+        <li><i class="bi bi-key"></i> API secrets stay on the server through environment variables.</li>
+        <li><i class="bi bi-speedometer2"></i> Express Rate Limit protects the external API route.</li>
+        <li><i class="bi bi-database"></i> In-memory caching reduces duplicate provider calls.</li>
+        <li><i class="bi bi-bug"></i> Central error middleware returns JSON for API calls and EJS pages for browser errors.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<%- include('partials/scripts') %>

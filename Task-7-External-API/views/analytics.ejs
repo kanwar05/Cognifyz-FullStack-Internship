@@ -1,0 +1,57 @@
+<%- include('partials/head') %>
+<%- include('partials/sidebar') %>
+
+<main class="main-content">
+  <%- include('partials/topbar') %>
+
+  <section class="stats-grid">
+    <article class="stat-card reveal">
+      <span class="stat-icon blue"><i class="bi bi-hdd-network"></i></span>
+      <p>Total API Requests</p>
+      <strong data-stat="totalRequests"><%= analytics.totalRequests %></strong>
+    </article>
+    <article class="stat-card reveal">
+      <span class="stat-icon green"><i class="bi bi-check2-circle"></i></span>
+      <p>Successful Requests</p>
+      <strong data-stat="successfulRequests"><%= analytics.successfulRequests %></strong>
+    </article>
+    <article class="stat-card reveal">
+      <span class="stat-icon red"><i class="bi bi-x-octagon"></i></span>
+      <p>Failed Requests</p>
+      <strong data-stat="failedRequests"><%= analytics.failedRequests %></strong>
+    </article>
+    <article class="stat-card reveal">
+      <span class="stat-icon amber"><i class="bi bi-database-check"></i></span>
+      <p>Cached Responses</p>
+      <strong data-stat="cachedResponses"><%= analytics.cachedResponses %></strong>
+    </article>
+  </section>
+
+  <section class="content-grid analytics-grid">
+    <article class="panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">Reliability</span>
+          <h3>Success Rate</h3>
+        </div>
+        <strong class="metric"><%= analytics.successRate %>%</strong>
+      </div>
+      <div class="progress modern-progress" role="progressbar" aria-valuenow="<%= analytics.successRate %>" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: <%= analytics.successRate %>%"></div>
+      </div>
+    </article>
+
+    <article class="panel reveal">
+      <div class="panel-header">
+        <div>
+          <span class="mini-label">Cache layer</span>
+          <h3>Stored Responses</h3>
+        </div>
+        <strong class="metric"><%= analytics.cacheSize %></strong>
+      </div>
+      <p class="muted-copy">Repeated searches are served from memory for faster responses and fewer external API calls.</p>
+    </article>
+  </section>
+</main>
+
+<%- include('partials/scripts') %>

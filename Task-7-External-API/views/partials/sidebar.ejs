@@ -1,0 +1,40 @@
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="/">
+    <span class="brand-mark"><i class="bi bi-cloud-sun"></i></span>
+    <span>
+      <strong>API Explorer</strong>
+      <small>Task 7 Dashboard</small>
+    </span>
+  </a>
+
+  <nav class="sidebar-nav" aria-label="Dashboard navigation">
+    <a class="<%= currentPath === '/' ? 'active' : '' %>" href="/">
+      <i class="bi bi-grid-1x2-fill"></i>
+      <span>Home Dashboard</span>
+    </a>
+    <a class="<%= currentPath === '/explorer' ? 'active' : '' %>" href="/explorer">
+      <i class="bi bi-search"></i>
+      <span>API Explorer</span>
+    </a>
+    <a class="<%= currentPath === '/history' ? 'active' : '' %>" href="/history">
+      <i class="bi bi-clock-history"></i>
+      <span>Search History</span>
+    </a>
+    <a class="<%= currentPath === '/analytics' ? 'active' : '' %>" href="/analytics">
+      <i class="bi bi-bar-chart-line"></i>
+      <span>API Analytics</span>
+    </a>
+    <a class="<%= currentPath === '/settings' ? 'active' : '' %>" href="/settings">
+      <i class="bi bi-sliders"></i>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-status">
+    <div class="pulse-dot"></div>
+    <div>
+      <strong>Open-Meteo</strong>
+      <span>Secure server proxy</span>
+    </div>
+  </div>
+</aside>
