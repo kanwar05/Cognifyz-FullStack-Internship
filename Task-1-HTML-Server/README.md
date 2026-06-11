@@ -34,11 +34,11 @@ Open `http://localhost:3001`.
 
 ## Screenshot
 
-### Server running
-<img src="./screenshots/server_running.png" width="400" alt="Home Page">
+### form
+<img src="./screenshots/Screenshot 2026-06-11 184028.png" width="400" alt="Home Page">
 
-### Browser output
-<img src="./screenshots/submission.png" width="400" alt="Home Page">
+### sumbited form
+<img src="./screenshots/Screenshot 2026-06-11 184044.png" width="400" alt="Home Page">
 
 
 ## Step-by-Step Implementation
