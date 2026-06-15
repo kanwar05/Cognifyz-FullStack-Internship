@@ -1,13 +1,14 @@
 {
   "name": "task-4-dom-validation",
   "version": "1.0.0",
-  "description": "Client-side DOM validation with tabs and dynamic updates.",
+  "description": "Complex form validation and dynamic DOM updates with Express, EJS, Bootstrap, and JavaScript.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
   },

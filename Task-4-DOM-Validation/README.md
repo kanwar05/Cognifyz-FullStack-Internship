@@ -1,8 +1,8 @@
-# Task 4 - DOM Validation
+# Task 4 - Complex Form Validation and Dynamic DOM Manipulation
 
 ## Objective
 
-Create complex client-side validation with password strength, live DOM updates, and client-side routing/tabs.
+Extend form validation and implement dynamic DOM updates using JavaScript in a complete Express + EJS project.
 
 ## Folder Structure
 
@@ -10,24 +10,37 @@ Create complex client-side validation with password strength, live DOM updates, 
 Task-4-DOM-Validation/
   app.js
   package.json
-  public/css/style.css
-  public/js/app.js
-  views/index.ejs
+  public/
+    css/
+      style.css
+    js/
+      script.js
+  views/
+    index.ejs
   README.md
 ```
 
-## Required npm Packages
+## Required Packages
 
 - express
 - ejs
+- bootstrap
 - nodemon
 
-## File Names
+## Features
 
-- app.js
-- views/index.ejs
-- public/js/app.js
-- public/css/style.css
+- Express server runs on port 3004.
+- `/` route renders `views/index.ejs`.
+- Modern registration/profile form with full name, email, phone, age, password, confirm password, course, gender, skills, and bio fields.
+- Complex client-side validation for name, email, phone, age, password rules, confirm password, selected skills, and bio length.
+- Live validation messages while typing.
+- Password strength meter.
+- Dynamic selected skills display.
+- Live profile preview card.
+- Submit button stays disabled until the full form is valid.
+- Success message appears without a page refresh.
+- Simple JavaScript hash routing with `#/home`, `#/form`, `#/preview`, and `#/success`.
+- Bootstrap 5 responsive layout with custom CSS animations, hover effects, transitions, cards, and mobile-friendly spacing.
 
 ## How to Run
 
@@ -36,16 +49,24 @@ npm install
 npm start
 ```
 
-Open `http://localhost:3004`.
+Open the project in your browser:
 
-## ScreenSHots
+```text
+http://localhost:3004
+```
 
-<video src="./screenshots/DOM-Validation.mp4" width="400" height="500" controls></video>
+For development with auto-restart:
 
-## Step-by-Step Implementation
+```bash
+npm run dev
+```
 
-1. Build an Express server that renders one EJS page.
-2. Add tabs that behave like client-side routes using hash URLs.
-3. Validate email, password, confirm password, name, track, and terms in JavaScript.
-4. Update password strength and summary content dynamically.
-5. Prevent submission until all validation rules pass.
+## Screenshot Section
+<img src="./screenshots/Screenshot 2026-06-15 181719.png"/>
+<img src="./screenshots/Screenshot 2026-06-15 181800.png" />
+<img src="./screenshots/Screenshot 2026-06-15 181947.png" />
+<img src="./screenshots/Screenshot 2026-06-15 182004.png" />
+
+## Learning Outcome
+
+This task demonstrates how to combine Express, EJS, Bootstrap, custom CSS, and JavaScript to build an interactive client-side form experience. It practices real-time validation, DOM updates, conditional button states, hash-based routing, and responsive UI design.
