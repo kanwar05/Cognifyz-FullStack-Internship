@@ -4,77 +4,187 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
+
+  <!-- Bootstrap CSS from the locally installed package -->
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <!-- Responsive Bootstrap navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Cognifyz Task 3</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <a class="navbar-brand fw-bold" href="#home">Cognifyz Task 3</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="mainNav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container py-5">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <p class="badge text-bg-success">Bootstrap Responsive Design</p>
-          <h1 class="display-5 fw-bold">Build layouts that adapt cleanly on mobile, tablet, and desktop.</h1>
-          <p class="lead">This independent Express app uses Bootstrap grids, cards, navbar collapse, and responsive spacing.</p>
-          <a class="btn btn-success btn-lg" href="#services">View Sections</a>
-        </div>
-        <div class="col-lg-6">
-          <div class="dashboard-preview">
-            <div class="preview-bar"></div>
-            <div class="preview-grid">
-              <span></span><span></span><span></span><span></span>
+  <main id="home">
+    <!-- Hero section with a strong call to action -->
+    <header class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 fade-slide">
+            <span class="hero-kicker">Advanced CSS + Bootstrap 5</span>
+            <h1 class="display-4 fw-bold mt-3">Create responsive pages that feel polished on every screen.</h1>
+            <p class="lead mt-3">
+              This Express and EJS project combines Bootstrap layout tools with custom animations,
+              gradients, hover states, and clean responsive spacing.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+              <a class="btn btn-primary btn-lg custom-btn" href="#services">Explore Services</a>
+              <a class="btn btn-outline-light btn-lg custom-btn-outline" href="#contact">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-panel fade-slide delay-1">
+              <div class="panel-top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="panel-body">
+                <div class="panel-card wide"></div>
+                <div class="panel-card"></div>
+                <div class="panel-card accent"></div>
+                <div class="panel-card"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section id="services" class="container py-5">
-      <div class="row g-4">
-        <% services.forEach((service) => { %>
-          <div class="col-md-6 col-lg-4">
-            <article class="card h-100">
-              <div class="card-body">
-                <h2 class="h5 card-title"><%= service.title %></h2>
-                <p class="card-text"><%= service.text %></p>
-              </div>
-            </article>
+    <!-- Features/services cards -->
+    <section class="section-padding" id="services">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <span class="section-label">What We Build</span>
+            <h2 class="section-title mt-2">Clean sections with responsive cards</h2>
+            <p class="section-text">
+              Each card uses Bootstrap columns for layout and custom CSS for motion, shadows, and hover feedback.
+            </p>
           </div>
-        <% }) %>
+        </div>
+
+        <div class="row g-4">
+          <% services.forEach((service) => { %>
+            <div class="col-md-6 col-lg-4">
+              <article class="service-card h-100">
+                <div class="service-icon">
+                  <span><%= service.icon %></span>
+                </div>
+                <h3><%= service.title %></h3>
+                <p><%= service.text %></p>
+                <a href="#contact" class="service-link">Learn more <span aria-hidden="true">-></span></a>
+              </article>
+            </div>
+          <% }) %>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-band py-5">
+    <!-- About section -->
+    <section class="about-section section-padding" id="about">
       <div class="container">
-        <div class="row align-items-center g-3">
-          <div class="col-md-8">
-            <h2 class="h3">Responsive Contact Section</h2>
-            <p class="mb-md-0">Columns stack on small screens and align horizontally on larger screens.</p>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="about-image-box">
+              <div class="about-shape shape-one"></div>
+              <div class="about-shape shape-two"></div>
+              <div class="about-content-card">
+                <span class="mini-icon">CSS</span>
+                <h3>Built for every viewport</h3>
+                <p>Spacing, columns, buttons, and cards adjust smoothly from mobile to desktop.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4 text-md-end">
-            <a class="btn btn-outline-dark" href="mailto:student@example.com">Email Student</a>
+
+          <div class="col-lg-6">
+            <span class="section-label">About The Page</span>
+            <h2 class="section-title mt-2">A modern beginner-friendly Express project</h2>
+            <p class="section-text">
+              The project keeps the backend simple and puts the design focus on Bootstrap components,
+              custom CSS, animation timing, and responsive utility classes.
+            </p>
+            <ul class="about-list">
+              <li><span>&check;</span> Bootstrap navbar with mobile collapse</li>
+              <li><span>&check;</span> Custom gradients and smooth transitions</li>
+              <li><span>&check;</span> Cards that lift and glow on hover</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Stats section -->
+    <section class="stats-section py-5" id="stats">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <% stats.forEach((stat) => { %>
+            <div class="col-md-4">
+              <div class="stat-item">
+                <h3><%= stat.value %></h3>
+                <p><%= stat.label %></p>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact and footer section -->
+    <footer class="footer-section section-padding" id="contact">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title text-white mt-2">Ready to view the responsive design?</h2>
+            <p class="footer-text">
+              Run the project locally, resize the browser, and test the navbar, cards, and sections on different screens.
+            </p>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="contact-card">
+              <h3>Contact</h3>
+              <p><span>@</span> student@example.com</p>
+              <p><span>#</span> Full Stack Internship Project</p>
+              <a class="btn btn-primary custom-btn w-100" href="mailto:student@example.com">Send Email</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="mb-0">&copy; 2026 Cognifyz Internship. Task 3 Responsive Design.</p>
+        </div>
+      </div>
+    </footer>
   </main>
 
+  <!-- Bootstrap JavaScript for navbar collapse -->
   <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

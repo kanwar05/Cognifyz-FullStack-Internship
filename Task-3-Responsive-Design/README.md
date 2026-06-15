@@ -1,8 +1,8 @@
-# Task 3 - Responsive Design
+# Task 3 - Advanced CSS Styling and Responsive Design
 
 ## Objective
 
-Create a responsive Express and EJS page using Bootstrap components, grid layout, navbar collapse, cards, and mobile-first styling.
+Enhance CSS styling and build a fully responsive multi-section webpage using Express.js, EJS, Bootstrap 5, and custom CSS.
 
 ## Folder Structure
 
@@ -10,25 +10,20 @@ Create a responsive Express and EJS page using Bootstrap components, grid layout
 Task-3-Responsive-Design/
   app.js
   package.json
-  public/css/style.css
-  views/index.ejs
-  views/success.ejs
+  public/
+    css/
+      style.css
+  views/
+    index.ejs
   README.md
 ```
 
-## Required npm Packages
+## Required Packages
 
 - express
 - ejs
 - bootstrap
 - nodemon
-
-## File Names
-
-- app.js
-- views/index.ejs
-- views/success.ejs
-- public/css/style.css
 
 ## How to Run
 
@@ -37,26 +32,37 @@ npm install
 npm start
 ```
 
-Open `http://localhost:3003`.
+Open the project in your browser:
 
-## Screenshots
+```text
+http://localhost:3003
+```
 
-### Mobile view
+For development with auto-restart:
 
-<video src="./screenshots/responsize design.mp4" width="400" height="500" controls></video>
+```bash
+npm run dev
+```
 
-### Tab View
+## Screenshot Section
 
-<img src="./screenshots/tab.png" width="400" alt="Submission Page">
+### desktop.png
+<img src='./screenshots/Screenshot 2026-06-15 180144.png' alt='desktop view' />
+### tablet.png
+<img src='./screenshots/Screenshot 2026-06-15 180239.png' alt='desktop view' />
+### mobile.png
+<img src='./screenshots/Screenshot 2026-06-15 180210.png' alt='desktop view' />
 
-### Desktop view
 
-<img src="./screenshots/desktop.png" width="400" alt="Submission Page">
+## Features Implemented
 
-## Step-by-Step Implementation
-
-1. Install Express, EJS, Bootstrap, and Nodemon.
-2. Serve Bootstrap from `node_modules`.
-3. Build a responsive navbar with collapse behavior.
-4. Use Bootstrap rows and columns for responsive sections.
-5. Add custom CSS for visual polish and mobile adjustments.
+- Express server running on port 3003.
+- `/` route renders `views/index.ejs`.
+- Responsive Bootstrap 5 navbar with mobile collapse.
+- Hero section with call-to-action buttons.
+- Features/services section using responsive Bootstrap cards.
+- About section with custom layered visual styling.
+- Stats section with responsive columns.
+- Contact/footer section.
+- Advanced custom CSS with gradients, transitions, hover effects, shadows, and fade/slide animation.
+- Mobile-first spacing and responsive adjustments for phone, tablet, and desktop layouts.
