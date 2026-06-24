@@ -57,8 +57,6 @@ Make sure MongoDB is running locally, then open `http://localhost:3006`.
 
 ### screenshots of the register page, login page, and protected dashboard after login.
 
-<video src="./screenshots/DB-Auth.mp4.mp4" width="400" height="500" controls></video>
-
 
 ## Step-by-Step Implementation
 
