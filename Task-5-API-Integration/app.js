@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 3005;
 
 let nextId = 3;
 let tasks = [
-  { id: 1, title: "Create REST API", completed: true },
-  { id: 2, title: "Connect frontend with fetch", completed: false },
+  { id: 1, title: "Build the task routes in Express", completed: true },
+  { id: 2, title: "Use fetch to refresh the page without reloading", completed: false },
 ];
 
 app.set("view engine", "ejs");

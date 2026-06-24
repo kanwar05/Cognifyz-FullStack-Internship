@@ -1,7 +1,7 @@
 # Task 5 - API Integration
 
 ## Objective
-Create REST API CRUD operations and connect them to a frontend using the Fetch API.
+Create REST API CRUD operations and connect them to a frontend using the Fetch API. This task is built as a small task board so the API actions feel clear when testing them in the browser.
 
 ## Folder Structure
 ```text
@@ -31,6 +31,14 @@ Task-5-API-Integration/
 - `PUT /api/tasks/:id`
 - `DELETE /api/tasks/:id`
 
+## What the UI Shows
+- A friendly task board heading with a short explanation of what the page is doing.
+- A task input form with a clear placeholder and validation message.
+- A live task list loaded from `/api/tasks`.
+- Total and completed task counters.
+- Human-readable success and error messages after add, complete, and delete actions.
+- Loading and empty states so the page does not feel unfinished.
+
 ## How to Run
 ```bash
 npm install
@@ -39,7 +47,7 @@ npm start
 Open `http://localhost:3005`.
 
 ## Screenshot
-### screenshots showing the task list, a newly added task, and a completed/deleted task interaction.
+### Screenshots or demo should show the task list, a newly added task, and a completed/deleted task interaction.
 <video src="./screenshots/API-Integration.mp4" width="400" height="500" controls></video>
 
 
