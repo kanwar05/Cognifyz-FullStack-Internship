@@ -44,15 +44,6 @@ For development with auto-restart:
 npm run dev
 ```
 
-## Screenshot Section
-
-### desktop.png
-<img src='./screenshots/Screenshot 2026-06-15 180144.png' alt='desktop view' />
-### tablet.png
-<img src='./screenshots/Screenshot 2026-06-15 180239.png' alt='desktop view' />
-### mobile.png
-<img src='./screenshots/Screenshot 2026-06-15 180210.png' alt='desktop view' />
-
 
 ## Features Implemented
 

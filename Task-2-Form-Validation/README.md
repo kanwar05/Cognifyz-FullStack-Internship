@@ -38,19 +38,7 @@ npm start
 
 Open `http://localhost:3002`.
 
-## Screenshot
 
-### Validation
-
-<img src="./screenshots/Screenshot 2026-06-11 184401.png" width="400" alt="Validation">
-
-### form data
-
-<img src="./screenshots/Screenshot 2026-06-11 184501.png" width="400" alt="Form Data">
-
-### Submission
-
-<img src="./screenshots/Screenshot 2026-06-11 184526.png" width="400" alt="Submission Page">
 
 ## Step-by-Step Implementation
 

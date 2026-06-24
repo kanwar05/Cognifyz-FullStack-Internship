@@ -53,9 +53,6 @@ npm start
 
 Make sure MongoDB is running locally, then open `http://localhost:3006`.
 
-## Screenshot
-
-### screenshots of the register page, login page, and protected dashboard after login.
 
 
 ## Step-by-Step Implementation

@@ -61,11 +61,6 @@ For development with auto-restart:
 npm run dev
 ```
 
-## Screenshot Section
-<img src="./screenshots/Screenshot 2026-06-15 181719.png"/>
-<img src="./screenshots/Screenshot 2026-06-15 181800.png" />
-<img src="./screenshots/Screenshot 2026-06-15 181947.png" />
-<img src="./screenshots/Screenshot 2026-06-15 182004.png" />
 
 ## Learning Outcome
 

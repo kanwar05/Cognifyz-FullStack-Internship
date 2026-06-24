@@ -32,14 +32,6 @@ npm start
 ```
 Open `http://localhost:3001`.
 
-## Screenshot
-
-### form
-<img src="./screenshots/Screenshot 2026-06-11 184028.png" width="400" alt="Home Page">
-
-### sumbited form
-<img src="./screenshots/Screenshot 2026-06-11 184044.png" width="400" alt="Home Page">
-
 
 ## Step-by-Step Implementation
 1. Initialize the folder with `npm init -y`.
